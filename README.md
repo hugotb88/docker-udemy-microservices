@@ -146,3 +146,34 @@ e.g Run two containers, both exposed in Host Ports, one using the port 5000 and 
 
 ** Could help for the DB images like MySQL, PostgreSQL, etc
 
+
+#  Other Docker commands 
+
+# Docker events logs
+``docker events`` --> log of Docker, if yo trigger a Docker command in other tab the log information will be placed here
+
+![image](https://user-images.githubusercontent.com/36638342/143727454-5951fe86-d202-48c8-b86a-66b1ca4a3f55.png)
+
+
+# Display the main command of specifi container
+``docker container top 8e1cf2e0608b`` -->  docker container top {CONTAINER ID}
+- Displays the top command executed in the container 
+- ![image](https://user-images.githubusercontent.com/36638342/143727493-a3f4c7b7-6955-4812-9187-956178c53456.png)
+
+# Display statistics like requests, memory, CPU usage 
+``docker stats``
+
+![image](https://user-images.githubusercontent.com/36638342/143727541-7b95838e-f57e-4cb4-a508-e82bba6ad14c.png)
+
+# Assigning limit of Memory RAM and CPU to a container
+``docker run -p 5001:5000 -d -m 512m --cpu-quota 5000 in28min/todo-rest-api-h2:1.0.0.RELEASE`` --> docker run -p 5001:5000 -d -m {memory in Megabytes or Gigabytes} --cpu-quota {CPU Percentage, quantity divided by 1000}  in28min/todo-rest-api-h2:1.0.0.RELEASE
+
+![image](https://user-images.githubusercontent.com/36638342/143727615-88befcab-446f-4383-850f-3040f22630cb.png)
+
+Statistics (Check CPU and MEM USAGE)
+![image](https://user-images.githubusercontent.com/36638342/143727621-dac6d6cf-b8e7-4a2a-8b00-3f5c02413186.png)
+
+# General status of your Docker
+``docker system df``
+![image](https://user-images.githubusercontent.com/36638342/143727683-a0012771-04dc-4bea-825d-e32bb6383da7.png)
+
