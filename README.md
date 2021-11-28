@@ -1,6 +1,10 @@
 # docker-udemy-microservices
 Some notes about the basics of Docker, took them from the UDEMY course Microservices with Java
 
+# Docker Architecture
+![image](https://user-images.githubusercontent.com/36638342/143726548-47060a9f-3aaf-4331-b5c8-a76a0a7f1170.png)
+
+
 # Installation
 For Windows: Execute the installer, restart and that's it.
 
@@ -66,4 +70,6 @@ e.g Run two containers, both exposed in Host Ports, one using the port 5000 and 
 - Use the 5 first digits of the container listed using ``docker container ls``
 
 ![image](https://user-images.githubusercontent.com/36638342/143726198-3ba731ad-81be-4e58-825d-d7937b714c5c.png)
+
+
 
