@@ -72,6 +72,7 @@ e.g Run two containers, both exposed in Host Ports, one using the port 5000 and 
 
 ![image](https://user-images.githubusercontent.com/36638342/143726198-3ba731ad-81be-4e58-825d-d7937b714c5c.png)
 
+# Docker IMAGES commands
 
 # Add another TAG to an existing Docker image
 ``docker tag  in28min/todo-rest-api-h2:1.0.0.RELEASE in28min/todo-rest-api-h2:latest`` -- This add the "latest" tag
@@ -90,3 +91,58 @@ e.g Run two containers, both exposed in Host Ports, one using the port 5000 and 
 - All the details of the images (Configurations and structure)
 - 
 ![image](https://user-images.githubusercontent.com/36638342/143726911-0e276437-588f-4114-9220-c889eb385ac3.png)
+
+
+# Docker CONTAINERS commands
+
+# Pause and run a Docker Container
+
+``docker container pause 49f9`` --> docker container pause {first 4 digists of ID}
+
+![image](https://user-images.githubusercontent.com/36638342/143727062-163b023c-f60c-4d2d-b7b7-03583bb5c24b.png)
+
+ - The container is still running, but if you want to send a request it won't respond.
+
+``docker container unpause 49f9`` --> docker container unpause {first 4 digists of ID}
+ - The container continue running
+
+
+# Inspect a container
+``docker container inspect 49f9`` --> docker container unpause {first 4 digists of ID}
+
+![image](https://user-images.githubusercontent.com/36638342/143727128-b7c2a025-825d-44a3-b970-bd09afbbefdf.png)
+
+- All the details if that container, the state, configurations, ports.
+
+
+# Display Docker containers that are running or were stopped 
+``docker container ls a`` 
+
+- Status of the latest containers, which ones are running, which ones were stopped.
+![image](https://user-images.githubusercontent.com/36638342/143727160-2fe5151f-04fa-4dc0-bd75-68503de9075f.png)
+
+
+#  Remove all the containers stopped
+``docker container prune``
+
+![image](https://user-images.githubusercontent.com/36638342/143727197-35d4e19c-1cd4-414f-a066-6d49cb40eb7c.png)
+
+# Stop a Docker container
+``docker container stop 49f9`` --> docker container stop {CONTAINER ID}
+
+- Stops the Container in a graceful way [SIGTERM]
+
+
+``docker container kill 49f9`` --> docker container stop {CONTAINER ID}
+
+- Stops the Container terminating the process at that moment [SIGKILL]
+
+# Restart policy of a Docker Container
+`` docker run -p 5000:5000 -d --restart=always in28min/todo-rest-api-h2:1.0.0.RELEASE ``
+- Restarts automatically a Docker container when the Docker Desktop is restarted
+- The default value is "no" 
+
+![image](https://user-images.githubusercontent.com/36638342/143727366-9f43d71b-e51f-48d8-a613-641f130b5eed.png)
+
+** Could help for the DB images like MySQL, PostgreSQL, etc
+
