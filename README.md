@@ -26,7 +26,8 @@ If you go in your brwser to https://hub.docker.com/r/in28min/todo-rest-api-h2, y
 
 https://hub.docker.com --> Public repository of Docker images
 
- Image --> Static
+ Image --> Static![143726816-09055e9b-d2f1-43cd-a446-355485693a84](https://user-images.githubusercontent.com/36638342/143726916-7695031b-26b0-4e54-9684-c9ccd5a6c45f.png)
+
  
  Container --> Image Running
 
@@ -72,4 +73,20 @@ e.g Run two containers, both exposed in Host Ports, one using the port 5000 and 
 ![image](https://user-images.githubusercontent.com/36638342/143726198-3ba731ad-81be-4e58-825d-d7937b714c5c.png)
 
 
+# Add another TAG to an existing Docker image
+``docker tag  in28min/todo-rest-api-h2:1.0.0.RELEASE in28min/todo-rest-api-h2:latest`` -- This add the "latest" tag
 
+- In Docker Hub, some of the images containg "latest" as the tag for the most recent version, BUT THIS DOEN'T HAPPEN THE WHOLE TIME, you need to review the version you need.
+  - e.g ``docker pull mysql`` by default Docker will pull the image with the "latest" tag on it.
+  - ![image](https://user-images.githubusercontent.com/36638342/143726734-09323ab8-67ba-4e08-a2e2-f33191cc21e2.png)
+
+# Check the history of an image
+``docker image history  b05128b000dd`` --> docker image history {IMAGE ID}
+
+![image](https://user-images.githubusercontent.com/36638342/143726816-09055e9b-d2f1-43cd-a446-355485693a84.png)
+
+# Inspect an specific image
+``docker image inspect b05128b000dd`` --> docker inspect imafe {IMAGE ID }
+- All the details of the images (Configurations and structure)
+- 
+![image](https://user-images.githubusercontent.com/36638342/143726911-0e276437-588f-4114-9220-c889eb385ac3.png)
