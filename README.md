@@ -155,7 +155,7 @@ e.g Run two containers, both exposed in Host Ports, one using the port 5000 and 
 ![image](https://user-images.githubusercontent.com/36638342/143727454-5951fe86-d202-48c8-b86a-66b1ca4a3f55.png)
 
 
-# Display the main command of specifi container
+# Display the main command of specific container
 ``docker container top 8e1cf2e0608b`` -->  docker container top {CONTAINER ID}
 - Displays the top command executed in the container 
 - ![image](https://user-images.githubusercontent.com/36638342/143727493-a3f4c7b7-6955-4812-9187-956178c53456.png)
