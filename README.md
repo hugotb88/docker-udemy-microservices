@@ -175,5 +175,6 @@ Statistics (Check CPU and MEM USAGE)
 
 # General status of your Docker
 ``docker system df``
+
 ![image](https://user-images.githubusercontent.com/36638342/143727683-a0012771-04dc-4bea-825d-e32bb6383da7.png)
 
